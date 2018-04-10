@@ -1,8 +1,10 @@
-package com.sheilambadi.android.tictactoe;
+package com.sheilambadi.android.tictactoe.singleplayer;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.sheilambadi.android.tictactoe.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;

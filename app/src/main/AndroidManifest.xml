@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BoardSizeActivity"></activity>
+        <activity android:name=".singleplayer.BoardSizeActivity" />
+        <activity android:name=".singleplayer.ThreeByThreeActivity"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.sheilambadi.android.tictactoe.singleplayer.ThreeByThreeActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Player 1 : "
+            fontPath="fonts/Lobster_Two/LobsterTwo-Regular.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvPlayer1Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvPlayer1"
+            android:text="0"
+            fontPath="fonts/Lobster_Two/LobsterTwo-Regular.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tvPlayer2Score"
+            android:text="Player 2 : "
+            fontPath="fonts/Lobster_Two/LobsterTwo-Regular.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvPlayer2Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="0"
+            fontPath="fonts/Lobster_Two/LobsterTwo-Regular.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/gameBoard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:padding="8dp">
+
+        <TableRow>
+            <Button
+                android:id="@+id/b00"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="X"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="48dp"
+                android:textSize="30sp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b01"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="O"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b02"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="X"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/b10"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="X"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="30sp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b11"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="X"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b12"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="O"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/b20"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="O"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="30sp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b21"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="O"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/b22"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@color/buttonColor"
+                android:text="X"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/textColor"/>
+        </TableRow>
+    
+    </TableLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="RESET"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:elevation="2dp"
+        android:translationZ="2dp"
+        android:stateListAnimator="@null"
+        android:textColor="@color/textColor"/>
+
+</LinearLayout>

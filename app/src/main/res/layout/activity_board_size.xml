@@ -29,6 +29,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/rounded_corners"
+        android:onClick="threeByThree"
         android:elevation="2dp"
         android:translationZ="2dp"
         android:stateListAnimator="@null"

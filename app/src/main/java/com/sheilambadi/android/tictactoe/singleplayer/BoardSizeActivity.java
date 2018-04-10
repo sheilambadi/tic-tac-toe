@@ -1,8 +1,10 @@
 package com.sheilambadi.android.tictactoe.singleplayer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.sheilambadi.android.tictactoe.R;
 
@@ -36,5 +38,10 @@ public class BoardSizeActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    public void threeByThree(View view){
+        Intent i = new Intent(this, ThreeByThreeActivity.class);
+        startActivity(i);
     }
 }

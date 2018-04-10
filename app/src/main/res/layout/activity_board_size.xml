@@ -5,8 +5,8 @@
     tools:ignore="MissingPrefix"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.sheilambadi.android.tictactoe.BoardSizeActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,12 +16,12 @@
         android:padding="16dp"
         android:gravity="center_horizontal"
         fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
-        android:text="Choose Number of Players"/>
+        android:text="Choose Board Size"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Single Player"
+        android:text="3 X 3"
         android:textSize="24sp"
         android:layout_gravity="center_horizontal"
         android:padding="8dp"
@@ -32,14 +32,13 @@
         android:elevation="2dp"
         android:translationZ="2dp"
         android:stateListAnimator="@null"
-        android:onClick="singlePlayer"
         android:textColor="@color/textColor"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Multi Player"
+        android:text="5 X 5"
         android:layout_gravity="center_horizontal"
         android:padding="8dp"
         android:layout_marginLeft="32dp"
@@ -50,4 +49,5 @@
         android:translationZ="2dp"
         android:stateListAnimator="@null"
         android:textColor="@color/textColor"/>
+
 </LinearLayout>

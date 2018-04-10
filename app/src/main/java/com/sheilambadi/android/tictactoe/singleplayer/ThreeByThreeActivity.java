@@ -3,7 +3,9 @@ package com.sheilambadi.android.tictactoe.singleplayer;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
     private  TextView tvPlayer2Score;
 
     private boolean player1Turn = true;
+    private boolean player2Turn = false;
     private int roundCount;
     private int player1Points;
     private int player2Points;
@@ -96,33 +99,94 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
             return;
         }
 
-        //if empty
+        if (roundCount < 9) {
+            ((Button) view).setText(playerUser);
+            if(checkForWin()){
+                player1Wins();
+            }
+
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    int positionx = -1;
+                    int positionY = -1;
+
+                    do {
+                        positionx = RANDOMX.nextInt(3);
+                        positionY = RANDOMX.nextInt(3);
+
+                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
+                    buttons[positionx][positionY].setText(playerComp);
+                    roundCount++;
+                    if(checkForWin()){
+                        player2Wins();
+                    }
+                    //finish();
+                }
+            }, 1000);
+            roundCount++;
+            Log.i("User", ""+roundCount);
+        }
+        if(roundCount == 9 || roundCount == 8){
+            draw();
+        }
+
+        //roundCount++;
+        /*if(roundCount < 9) {
+            ((Button) view).setText(playerUser);
+            roundCount++;
+            Log.i("User", ""+roundCount);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    int positionx = -1;
+                    int positionY = -1;
+
+                    do {
+                        positionx = RANDOMX.nextInt(3);
+                        positionY = RANDOMX.nextInt(3);
+                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
+                    buttons[positionx][positionY].setText(playerComp);
+                    roundCount++;
+                    //finish();
+                }
+            }, 1000);
+        } else if (roundCount == 9){
+            draw();
+        }
+        Log.i("Comp", ""+roundCount);*/
+       /* //if empty
         if (player1Turn) {
             ((Button) view).setText(playerUser);
+            player1Turn = false;
+            player2Turn = true;
+        } else if (player2Turn){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    int positionx = -1;
+                    int positionY = -1;
 
-            /*int positionx = -1;
-            int positionY = -1;
-
-            do {
-                positionx = RANDOMX.nextInt(3);
-                positionY = RANDOMX.nextInt(3);
-            } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
-            buttons[positionx][positionY].setText(playerComp);*/
-        } /*else {
-            int positionx = -1;
-            int positionY = -1;
-
-            do {
-                positionx = RANDOMX.nextInt(3);
-                positionY = RANDOMX.nextInt(3);
-            } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
-            buttons[positionx][positionY].setText(playerComp);
-        }*/ else {
-            ((Button) view).setText(playerComp);
+                    do {
+                        positionx = RANDOMX.nextInt(3);
+                        positionY = RANDOMX.nextInt(3);
+                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
+                    buttons[positionx][positionY].setText(playerComp);
+                    //finish();
+                }
+            }, 1000);
+            player2Turn = false;
+            player1Turn = true;
         }
-        roundCount++;
+        *//*else {
+            ((Button) view).setText(playerComp);
+        }*//*
+        roundCount++;*/
 
-        if(checkForWin()) {
+       /* if(checkForWin()) {
             if (player1Turn){
                 player1Wins();
             } else {
@@ -130,9 +194,7 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
             }
         } else if (roundCount == 9) {
             draw();
-        } else {
-            player1Turn = !player1Turn;
-        }
+        } */
     }
 
     private boolean checkForWin() {

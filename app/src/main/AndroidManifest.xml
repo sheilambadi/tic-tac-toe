@@ -22,7 +22,8 @@
         <activity android:name=".singleplayer.BoardSizeActivity" />
         <activity android:name=".singleplayer.ThreeByThreeActivity" />
         <activity android:name=".singleplayer.FiveByFiveActivity" />
-        <activity android:name=".multiplayer.BoardSizeActivity"></activity>
+        <activity android:name=".multiplayer.BoardSizeActivity" />
+        <activity android:name=".multiplayer.MultiThreeActivity"></activity>
     </application>
 
 </manifest>

@@ -53,6 +53,7 @@
         android:elevation="2dp"
         android:translationZ="2dp"
         android:stateListAnimator="@null"
+        android:onClick="multiThree"
         android:textColor="@color/textColor"/>
 
     <Button

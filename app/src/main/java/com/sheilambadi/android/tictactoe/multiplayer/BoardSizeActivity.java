@@ -1,6 +1,7 @@
 package com.sheilambadi.android.tictactoe.multiplayer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -71,6 +72,13 @@ public class BoardSizeActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    public void multiThree(View view){
+        Intent i = new Intent(this, MultiThreeActivity.class);
+        i.putExtra("valueUser", valueUser);
+        i.putExtra("valueComp", valueComp);
+        startActivity(i);
     }
 }
 

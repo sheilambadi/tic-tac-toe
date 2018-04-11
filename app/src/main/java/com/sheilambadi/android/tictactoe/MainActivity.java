@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void  multiPlayer(View view){
+        Intent i = new Intent(this, com.sheilambadi.android.tictactoe.multiplayer.BoardSizeActivity.class);
+        startActivity(i);
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".singleplayer.BoardSizeActivity" />
         <activity android:name=".singleplayer.ThreeByThreeActivity" />
-        <activity android:name=".singleplayer.FiveByFiveActivity"/>
+        <activity android:name=".singleplayer.FiveByFiveActivity" />
+        <activity android:name=".multiplayer.BoardSizeActivity"></activity>
     </application>
 
 </manifest>

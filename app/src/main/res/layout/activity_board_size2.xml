@@ -16,7 +16,7 @@
         android:padding="16dp"
         android:layout_gravity="center_horizontal"
         fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
-        android:text="Play with X or O"/>
+        android:text="Player 1 choose X or O"/>
 
     <Spinner
         android:id="@+id/spinner"

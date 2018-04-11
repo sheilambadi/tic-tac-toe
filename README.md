@@ -4,7 +4,7 @@ This is the classic tic tac toe game implemented in Android as part of the ALC 2
 ## Installation
 Install the apk file in your phone **(app-debug.apk)**.
 
-The apk file is located in the release section as illustrated
+The apk file is located in the [release](https://github.com/sheilambadi/tic-tac-toe/releases "Tic Tac Toe Game") section as illustrated
 
 <img src="Images/release.png">
 

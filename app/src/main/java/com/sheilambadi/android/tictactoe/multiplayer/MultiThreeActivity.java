@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import com.sheilambadi.android.tictactoe.R;
 
-import java.util.Random;
-
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -20,9 +18,6 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
     Intent i;
     String playerComp;
     String playerUser;
-
-    private static final Random RANDOMX = new Random();
-    private static final Random RANDOMY = new Random();
 
     private Button[][] buttons = new Button[3][3];
     private TextView tvPlayer1Score;
@@ -93,11 +88,11 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
         if (!((Button) view).getText().toString().equals("")) {
             return;
         }
-        Toast.makeText(this, "Player 1 turn", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Player 1 turn", Toast.LENGTH_SHORT).show();
         if (player1Turn) {
             ((Button) view).setText(playerUser);
         } else {
-            Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
             ((Button) view).setText(playerComp);
         }
         //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();

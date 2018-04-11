@@ -80,6 +80,13 @@ public class BoardSizeActivity extends AppCompatActivity {
         i.putExtra("valueComp", valueComp);
         startActivity(i);
     }
+
+    public void multiFive(View view){
+        Intent i = new Intent(this, MultiFiveActivity.class);
+        i.putExtra("valueUser", valueUser);
+        i.putExtra("valueComp", valueComp);
+        startActivity(i);
+    }
 }
 
 

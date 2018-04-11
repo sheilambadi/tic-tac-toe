@@ -1,11 +1,9 @@
-package com.sheilambadi.android.tictactoe.singleplayer;
+package com.sheilambadi.android.tictactoe.multiplayer;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,18 +11,13 @@ import android.widget.Toast;
 
 import com.sheilambadi.android.tictactoe.R;
 
-import java.util.Random;
-
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class FiveByFiveActivity extends AppCompatActivity implements View.OnClickListener{
+public class MultiFiveActivity extends AppCompatActivity implements View.OnClickListener{
     Intent i;
     String playerComp;
     String playerUser;
-
-    private static final Random RANDOMX = new Random();
-    private static final Random RANDOMY = new Random();
 
     private Button[][] buttons = new Button[5][5];
     private TextView tvPlayer1Score;
@@ -93,42 +86,28 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        //button has input
         if (!((Button) view).getText().toString().equals("")) {
             return;
         }
-
-        if (roundCount < 25) {
+        //Toast.makeText(this, "Player 1 turn", Toast.LENGTH_SHORT).show();
+        if (player1Turn) {
             ((Button) view).setText(playerUser);
-            if(checkForWin()){
-                player1Wins();
-            }
-
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    int positionx = -1;
-                    int positionY = -1;
-
-                    do {
-                        positionx = RANDOMX.nextInt(5);
-                        positionY = RANDOMY.nextInt(5);
-
-                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
-                    buttons[positionx][positionY].setText(playerComp);
-                    roundCount++;
-                    if(checkForWin()){
-                        player2Wins();
-                    }
-                    //finish();
-                }
-            }, 1000);
-            roundCount++;
-            Log.i("User", ""+roundCount);
+        } else {
+            //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
+            ((Button) view).setText(playerComp);
         }
-        if(roundCount == 25 || roundCount == 24){
+        //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
+
+        if(checkForWin()) {
+            if (player1Turn){
+                player1Wins();
+            } else {
+                player2Wins();
+            }
+        } else if (roundCount == 25) {
             draw();
+        } else {
+            player1Turn = !player1Turn;
         }
     }
 

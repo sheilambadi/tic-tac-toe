@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.sheilambadi.android.tictactoe.R;
 
+import es.dmoral.toasty.Toasty;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -154,20 +155,20 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
 
     private void player1Wins(){
         player1Points++;
-        Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show();
+        Toasty.success(this, "Player 1 wins!", Toast.LENGTH_SHORT,false).show();
         updatePointsText();
         resetBoard();
     }
 
     private void player2Wins(){
         player2Points++;
-        Toast.makeText(this, "Player 2 wins!", Toast.LENGTH_SHORT).show();
+        Toasty.success(this, "Player 2 wins!", Toast.LENGTH_SHORT,false).show();
         updatePointsText();
         resetBoard();
     }
 
     private void draw(){
-        Toast.makeText(this, "Draw!", Toast.LENGTH_SHORT).show();
+        Toasty.error(this, "Draw!", Toast.LENGTH_SHORT,false).show();
         resetBoard();
     }
 

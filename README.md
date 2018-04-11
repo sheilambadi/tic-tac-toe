@@ -43,7 +43,7 @@ After installing a take the following steps to play the game.
  
 **MIT License**
 
-Copyright (c)  [2018] [Sheila Mbadi]
+<p>&copy; 2018 Sheila Mbadi</p>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

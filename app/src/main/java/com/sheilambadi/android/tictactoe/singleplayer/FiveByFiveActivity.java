@@ -50,6 +50,7 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_five_by_five);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_32dp);
+
         i = getIntent();
 
         playerComp = i.getStringExtra("valueComp");

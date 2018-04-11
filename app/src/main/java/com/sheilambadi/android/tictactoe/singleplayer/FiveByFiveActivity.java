@@ -100,6 +100,19 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
         }
 
         if (roundCount < 25) {
+
+            /*final Handler handler1 = new Handler();
+            handler1.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ((Button) view).setText(playerUser);
+                    if(checkForWin()){
+                        player1Wins();
+                    }
+                }
+            }, 1000);*/
+
+
             ((Button) view).setText(playerUser);
             if(checkForWin()){
                 player1Wins();
@@ -124,7 +137,7 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
                     }
                     //finish();
                 }
-            }, 1000);
+            }, 200);
             roundCount++;
             Log.i("User", ""+roundCount);
         }

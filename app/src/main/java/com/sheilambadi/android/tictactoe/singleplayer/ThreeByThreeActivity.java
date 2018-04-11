@@ -125,77 +125,13 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
                     }
                     //finish();
                 }
-            }, 1000);
+            }, 200);
             roundCount++;
             Log.i("User", ""+roundCount);
         }
         if(roundCount == 9 || roundCount == 8){
             draw();
         }
-
-        //roundCount++;
-        /*if(roundCount < 9) {
-            ((Button) view).setText(playerUser);
-            roundCount++;
-            Log.i("User", ""+roundCount);
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    int positionx = -1;
-                    int positionY = -1;
-
-                    do {
-                        positionx = RANDOMX.nextInt(3);
-                        positionY = RANDOMX.nextInt(3);
-                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
-                    buttons[positionx][positionY].setText(playerComp);
-                    roundCount++;
-                    //finish();
-                }
-            }, 1000);
-        } else if (roundCount == 9){
-            draw();
-        }
-        Log.i("Comp", ""+roundCount);*/
-       /* //if empty
-        if (player1Turn) {
-            ((Button) view).setText(playerUser);
-            player1Turn = false;
-            player2Turn = true;
-        } else if (player2Turn){
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    int positionx = -1;
-                    int positionY = -1;
-
-                    do {
-                        positionx = RANDOMX.nextInt(3);
-                        positionY = RANDOMX.nextInt(3);
-                    } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
-                    buttons[positionx][positionY].setText(playerComp);
-                    //finish();
-                }
-            }, 1000);
-            player2Turn = false;
-            player1Turn = true;
-        }
-        *//*else {
-            ((Button) view).setText(playerComp);
-        }*//*
-        roundCount++;*/
-
-       /* if(checkForWin()) {
-            if (player1Turn){
-                player1Wins();
-            } else {
-                player2Wins();
-            }
-        } else if (roundCount == 9) {
-            draw();
-        } */
     }
 
     private boolean checkForWin() {

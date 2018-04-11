@@ -96,6 +96,7 @@ public class MultiFiveActivity extends AppCompatActivity implements View.OnClick
             //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
             ((Button) view).setText(playerComp);
         }
+        roundCount++;
         //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
 
         if(checkForWin()) {

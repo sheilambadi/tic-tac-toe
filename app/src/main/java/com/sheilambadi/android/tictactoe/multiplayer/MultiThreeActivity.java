@@ -95,6 +95,8 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
             //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
             ((Button) view).setText(playerComp);
         }
+
+        roundCount++;
         //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
 
         if(checkForWin()) {

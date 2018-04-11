@@ -81,4 +81,11 @@ public class BoardSizeActivity extends AppCompatActivity {
         i.putExtra("valueComp", valueComp);
         startActivity(i);
     }
+
+    public void fiveByFive(View view){
+        Intent i = new Intent(this, FiveByFiveActivity.class);
+        i.putExtra("valueUser", valueUser);
+        i.putExtra("valueComp", valueComp);
+        startActivity(i);
+    }
 }

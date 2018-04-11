@@ -70,6 +70,7 @@
         android:elevation="2dp"
         android:translationZ="2dp"
         android:stateListAnimator="@null"
+        android:onClick="fiveByFive"
         android:textColor="@color/textColor"/>
 
 </LinearLayout>

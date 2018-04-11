@@ -31,7 +31,7 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
     private  TextView tvPlayer2Score;
 
     private boolean player1Turn = true;
-    private boolean player2Turn = false;
+    //private boolean player2Turn = false;
     private int roundCount;
     private int player1Points;
     private int player2Points;
@@ -114,7 +114,7 @@ public class ThreeByThreeActivity extends AppCompatActivity implements View.OnCl
 
                     do {
                         positionx = RANDOMX.nextInt(3);
-                        positionY = RANDOMX.nextInt(3);
+                        positionY = RANDOMY.nextInt(3);
 
                     } while (!((buttons[positionx][positionY]).getText().toString().equals("")));
                     buttons[positionx][positionY].setText(playerComp);

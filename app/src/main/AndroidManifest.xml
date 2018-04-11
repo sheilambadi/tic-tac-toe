@@ -20,7 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".singleplayer.BoardSizeActivity" />
-        <activity android:name=".singleplayer.ThreeByThreeActivity"></activity>
+        <activity android:name=".singleplayer.ThreeByThreeActivity" />
+        <activity
+            android:name=".singleplayer.FiveByFiveActivity"
+            android:label="@string/title_activity_five_by_five"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

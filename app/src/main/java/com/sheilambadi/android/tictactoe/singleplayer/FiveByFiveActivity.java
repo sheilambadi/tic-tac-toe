@@ -140,22 +140,29 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
             }
         }
 
+        //rows
         for (int i = 0; i < 5; i++) {
             if (field[i][0].equals(field[i][1])
                     && field[i][0].equals(field[i][2])
+                    && field[i][0].equals(field[i][3])
+                    && field[i][0].equals(field[i][4])
                     && !field[i][0].equals("")) {
                 return true;
             }
         }
 
+        //cols
         for (int i = 0; i < 5; i++) {
             if (field[0][i].equals(field[1][i])
                     && field[0][i].equals(field[2][i])
+                    && field[0][i].equals(field[3][i])
+                    && field[0][i].equals(field[4][i])
                     && !field[0][i].equals("")) {
                 return true;
             }
         }
 
+        //diagonals
         if (field[0][0].equals(field[1][1])
                 && field[0][0].equals(field[2][2])
                 && field[0][0].equals(field[3][3])
@@ -164,8 +171,10 @@ public class FiveByFiveActivity extends AppCompatActivity implements View.OnClic
             return true;
         }
 
-        if (field[0][2].equals(field[1][1])
-                && field[0][2].equals(field[2][0])
+        if (field[0][4].equals(field[1][3])
+                && field[0][2].equals(field[2][2])
+                && field[0][2].equals(field[3][1])
+                && field[0][2].equals(field[4][0])
                 && !field[0][2].equals("")) {
             return true;
         }

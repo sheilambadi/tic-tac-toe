@@ -1,76 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingPrefix"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.sheilambadi.android.tictactoe.multiplayer.BoardSizeActivity">
+    android:layout_marginBottom="16dp"
+    tools:context="com.sheilambadi.android.tictactoe.multiplayer.BoardSizeActivity"
+    tools:ignore="MissingPrefix">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:textColor="@android:color/black"
-        android:padding="16dp"
-        android:layout_gravity="center_horizontal"
-        fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
-        android:text="Player 1 choose X or O"/>
-
-    <Spinner
-        android:id="@+id/spinner"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:layout_gravity="center_horizontal"
-        />
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:textColor="@android:color/black"
-        android:padding="16dp"
-        android:layout_gravity="center_horizontal"
-        fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
-        android:text="Choose Board Size"/>
+        <TextView
+            fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="Player 1 choose X or O"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="3 X 3"
-        android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_corners"
-        android:elevation="2dp"
-        android:translationZ="2dp"
-        android:stateListAnimator="@null"
-        android:onClick="multiThree"
-        android:textColor="@color/textColor"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@android:drawable/btn_dropdown" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="5 X 5"
-        android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_corners"
-        android:elevation="2dp"
-        android:translationZ="2dp"
-        android:stateListAnimator="@null"
-        android:onClick="multiFive"
-        android:textColor="@color/textColor"/>
+        <TextView
+            fontPath="fonts/Pacifico/Pacifico-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="Choose Board Size"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="2dp"
+            android:onClick="multiThree"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:text="3 X 3"
+            android:textColor="@color/textColor"
+            android:textSize="24sp"
+            android:translationZ="2dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="2dp"
+            android:onClick="multiFive"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:text="5 X 5"
+            android:textColor="@color/textColor"
+            android:textSize="24sp"
+            android:translationZ="2dp" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

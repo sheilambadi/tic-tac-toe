@@ -57,6 +57,19 @@
             android:textSize="24sp"/>
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/tvTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvPlayer1"
+        android:text="Player 1 turn"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        fontPath="fonts/Lobster_Two/LobsterTwo-Regular.ttf"
+        android:textColor="@color/player1"
+        android:freezesText="true"
+        android:textSize="32sp"/>
+
     <TableLayout
         android:id="@+id/gameBoard3"
         android:layout_width="wrap_content"

@@ -23,6 +23,7 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
     private Button[][] buttons = new Button[3][3];
     private TextView tvPlayer1Score;
     private  TextView tvPlayer2Score;
+    private TextView tvTurn;
 
     private boolean player1Turn = true;
     //private boolean player2Turn = false;
@@ -52,6 +53,8 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
         //score textviews
         tvPlayer1Score = findViewById(R.id.tvPlayer1Score);
         tvPlayer2Score = findViewById(R.id.tvPlayer2Score);
+        tvTurn = findViewById(R.id.tvTurn);
+        tvTurn.setVisibility(View.VISIBLE);
 
         //buttons
         for (int i = 0; i < 3; i++){
@@ -92,8 +95,12 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
         //Toast.makeText(this, "Player 1 turn", Toast.LENGTH_SHORT).show();
         if (player1Turn) {
             ((Button) view).setText(playerUser);
+            tvTurn.setText("Player 2 turn");
+            tvTurn.setTextColor(getResources().getColor(R.color.player2));
         } else {
             //Toast.makeText(this, "Player 2 turn", Toast.LENGTH_SHORT).show();
+            tvTurn.setText("Player 1 turn");
+            tvTurn.setTextColor(getResources().getColor(R.color.player1));
             ((Button) view).setText(playerComp);
         }
 
@@ -186,6 +193,9 @@ public class MultiThreeActivity extends AppCompatActivity implements View.OnClic
 
         roundCount = 0;
         player1Turn = true;
+        tvTurn.setText("Player 1 Turn");
+        tvTurn.setTextColor(getResources().getColor(R.color.player1));
+
     }
 
     private void resetGame(){
